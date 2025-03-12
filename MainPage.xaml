@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TPApp.MainPage">
+
+    <StackLayout>
+        <!-- Vertical ScrollView -->
+        <ScrollView Orientation="Vertical" BackgroundColor="#4A6E8A" HorizontalOptions="Fill">
+            <StackLayout Padding="10">
+                <!-- Fridges label inside ScrollView as headline -->
+                <Label Text="Fridges" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="Bold" Padding="5"/>
+
+                <!-- Line under the Fridges label -->
+                <BoxView HeightRequest="2" BackgroundColor="White"/>
+
+                <!-- Horizontal ScrollView for dynamically generated fridge cards -->
+                <ScrollView Orientation="Horizontal" BackgroundColor="#4A6E8A" HorizontalOptions="Fill">
+                    <StackLayout Orientation="Horizontal" Padding="10"
+                                 BindableLayout.ItemsSource="{Binding FridgeList}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#212121" Padding="10" CornerRadius="10" Margin="5" WidthRequest="250">
+                                    <StackLayout>
+                                        <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="GhostWhite"/>
+
+                                        <!-- List of Food Items -->
+                                        <StackLayout Padding="5"
+                                                     BindableLayout.ItemsSource="{Binding FoodItems}">
+                                            <BindableLayout.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Label Text="{Binding}" FontSize="Small" TextColor="#D8B446"/>
+                                                </DataTemplate>
+                                            </BindableLayout.ItemTemplate>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

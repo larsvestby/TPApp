@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TPApp.RegistrationPage"
+             Title="Register">
+
+    <VerticalStackLayout Margin="15" Padding="30, 60, 30, 30">
+        <Label Text="Register an Account" FontSize="30" TextColor="#3E8E56" HorizontalOptions="Center" />
+
+        <Label Text="Username" TextColor="GhostWhite" WidthRequest="300"/>
+        <Entry x:Name="UsernameEntry" Placeholder="Enter username" TextColor="GhostWhite" WidthRequest="300"/>
+
+        <Label Text="Password" TextColor="GhostWhite" WidthRequest="300"/>
+        <Entry x:Name="PasswordEntry" Placeholder="Enter password" IsPassword="True" TextColor="#D8B446" WidthRequest="300"/>
+
+        <Label Text="Confirm Password" TextColor="GhostWhite" WidthRequest="300"/>
+        <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm password" IsPassword="True" TextColor="#D8B446" WidthRequest="300"/>
+
+        <Button Text="Register" BackgroundColor="#4A6E8A" HorizontalOptions="Center" WidthRequest="150"/>
+    </VerticalStackLayout>
+
+</ContentPage>

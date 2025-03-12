@@ -1,0 +1,77 @@
+<Shell
+    x:Class="TPApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TPApp"
+    Title="TPApp"
+    >
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage"
+        FlyoutItemIsVisible="False"/>
+
+    <!-- MainPage route -->
+    <ShellContent
+        Title="Main"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"
+        FlyoutItemIsVisible="{Binding AppVisible}" />
+
+    <!-- RecipePage route -->
+    <FlyoutItem Title="Recipes" FlyoutItemIsVisible="{Binding AppVisible}">
+        <Tab>
+            <ShellContent
+                Title="Recipes"
+                ContentTemplate="{DataTemplate local:RecipePage}"
+                Route="RecipePage"/>
+        </Tab>
+    </FlyoutItem>
+
+    <!-- AddFoodPage route -->
+    <FlyoutItem Title="Add Food" FlyoutItemIsVisible="{Binding AppVisible}">
+        <Tab>
+            <ShellContent
+                Title="Add Food"
+                ContentTemplate="{DataTemplate local:AddFoodPage}"
+                Route="AddFoodPage"/>
+        </Tab>
+    </FlyoutItem>
+
+    <!-- NotificationPage route -->
+    <FlyoutItem Title="Notifications" FlyoutItemIsVisible="{Binding AppVisible}">
+        <Tab>
+            <ShellContent
+                Title="Notifications"
+                ContentTemplate="{DataTemplate local:NotificationPage}"
+                Route="NotificationPage"/>
+        </Tab>
+    </FlyoutItem>
+
+    <!-- ShoppingListPage route -->
+    <FlyoutItem Title="Shopping List" FlyoutItemIsVisible="{Binding AppVisible}">
+        <Tab>
+            <ShellContent
+                Title="Shopping List"
+                ContentTemplate="{DataTemplate local:ShoppingListPage}"
+                Route="ShoppingListPage"/>
+        </Tab>
+    </FlyoutItem>
+
+    <!-- Logout -->
+    <FlyoutItem Title="Log Out" FlyoutItemIsVisible="{Binding AppVisible}">
+        <Tab>
+            <ShellContent>
+                <ContentPage>
+                    <ContentPage.Content>
+                        <StackLayout>
+                            <Button Text="Logout" Margin="5" Clicked="OnLogoutClicked" />
+                        </StackLayout>
+                    </ContentPage.Content>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+</Shell>

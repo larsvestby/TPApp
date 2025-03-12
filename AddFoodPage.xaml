@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TPApp.AddFoodPage"
+             Title="Add Food to Fridge">
+
+    <VerticalStackLayout Margin="15" Padding="30, 60, 30, 30">
+        <Label Text="Add Food to Fridge" FontSize="30" TextColor="#3E8E56" HorizontalOptions="Center" />
+
+        <!-- Food Item Name -->
+        <Label Text="Food Name" TextColor="GhostWhite" WidthRequest="300"/>
+        <Entry x:Name="FoodNameEntry" Placeholder="Enter food name" TextColor="GhostWhite" WidthRequest="300"/>
+
+        <!-- Food Category Picker -->
+        <Label Text="Food Category" TextColor="GhostWhite" WidthRequest="300"/>
+        <Picker x:Name="FoodCategoryPicker" Title="Select Food Category" TextColor="GhostWhite" WidthRequest="300"
+        ItemsSource="{Binding FoodCategories}" SelectedItem="{Binding SelectedFoodCategory}" />
+        
+        <!-- Quantity -->
+        <Label Text="Quantity" TextColor="GhostWhite" WidthRequest="300"/>
+        <Entry x:Name="FoodQuantityEntry" Placeholder="Enter quantity" TextColor="GhostWhite" Keyboard="Numeric" WidthRequest="300"/>
+
+        <!-- Measurement Unit Picker -->
+        <Label Text="Measurement Unit" TextColor="GhostWhite" WidthRequest="300"/>
+        <Picker x:Name="MeasurementUnitPicker" Title="Select Measurement Unit" TextColor="GhostWhite" WidthRequest="300"
+        ItemsSource="{Binding MeasurementUnits}" SelectedItem="{Binding SelectedMeasurementUnit}" />
+
+        <!-- Expiration Date -->
+        <Label Text="Expiration Date" TextColor="GhostWhite" WidthRequest="300"/>
+        <DatePicker x:Name="ExpirationDatePicker" TextColor="GhostWhite" WidthRequest="300"/>
+
+        <HorizontalStackLayout>
+            <!-- Barcode Scan Button -->
+            <Button Text="Scan Barcode" Margin="5" BackgroundColor="#4A6E8A" HorizontalOptions="Center" WidthRequest="150"/>
+
+            <!-- Add Food Button -->
+            <Button Text="Add Food" Margin="5" BackgroundColor="#4A6E8A" HorizontalOptions="Center" WidthRequest="150"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>
