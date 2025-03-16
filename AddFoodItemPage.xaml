@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TPApp.AddFoodItemPage"
+             Title="Add Food Item">
+    <VerticalStackLayout Margin="20" Spacing="15">
+        <Label Text="Food Name" TextColor="White"/>
+        <Entry x:Name="FoodNameEntry" TextColor="White"/>
+
+        <Label Text="Category" TextColor="White"/>
+        <Picker x:Name="CategoryPicker">
+            <Picker.Items>
+                <x:String>Dairy</x:String>
+                <x:String>Meat</x:String>
+                <x:String>Vegetables</x:String>
+                <x:String>Fruits</x:String>
+                <x:String>Grains</x:String>
+                <x:String>Beverages</x:String>
+                <x:String>Snacks</x:String>
+                <x:String>Seafood</x:String>
+                <x:String>Other</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Quantity" TextColor="White"/>
+        <Entry x:Name="QuantityEntry" Keyboard="Numeric" TextColor="White"/>
+
+        <Label Text="Unit" TextColor="White"/>
+        <Picker x:Name="UnitPicker">
+            <Picker.Items>
+                <x:String>Grams</x:String>
+                <x:String>Kilograms</x:String>
+                <x:String>Liters</x:String>
+                <x:String>Milliliters</x:String>
+                <x:String>Pieces</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Expiration Date" TextColor="White"/>
+        <DatePicker x:Name="ExpirationDatePicker"/>
+
+        <Button Text="Add Food" 
+                Clicked="OnAddFoodItemClicked" 
+                BackgroundColor="#4A6E8A" 
+                TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -294,14 +294,20 @@ C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\TPApp.pdb
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Web.WebView2.Core.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Http.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.Debug.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Options.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Primitives.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.Interop.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.IO.RecyclableMemoryStream.dll
@@ -311,6 +317,7 @@ C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Essentials.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Net.Http.Headers.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.InteractiveExperiences.Projection.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.WinUI.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppLifecycle.Projection.dll
@@ -447,6 +454,7 @@ C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-windows10.0.19041.0\win
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\TPApp.AssemblyInfoInputs.cache
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\TPApp.AssemblyInfo.cs
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\TPApp.csproj.CoreCompileInputs.cache
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\TPApp.sourcelink.json
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\TPApp.csproj.Up2Date
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\TPApp.dll

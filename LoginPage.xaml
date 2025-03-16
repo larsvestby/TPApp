@@ -15,7 +15,7 @@
 
         <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Padding="0,5,0,0">
             <Button Text="Log in" BackgroundColor="#4A6E8A" Clicked="LoginButton_Clicked" HorizontalOptions="Fill" WidthRequest="150"/>
-            <Button Text="Register" BackgroundColor="#4A6E8A" Clicked="LoginButton_Clicked" HorizontalOptions="Fill" WidthRequest="150"/>
+            <Button Text="Register" BackgroundColor="#4A6E8A" Clicked="OnRegisterClicked" HorizontalOptions="Fill" WidthRequest="150"/>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 

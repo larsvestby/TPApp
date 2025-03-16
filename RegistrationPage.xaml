@@ -4,19 +4,51 @@
              x:Class="TPApp.RegistrationPage"
              Title="Register">
 
-    <VerticalStackLayout Margin="15" Padding="30, 60, 30, 30">
-        <Label Text="Register an Account" FontSize="30" TextColor="#3E8E56" HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout Margin="15" Padding="30, 60, 30, 30" Spacing="15">
+            <Label Text="Register an Account" 
+                   FontSize="30" 
+                   TextColor="#3E8E56" 
+                   HorizontalOptions="Center" />
 
-        <Label Text="Username" TextColor="GhostWhite" WidthRequest="300"/>
-        <Entry x:Name="UsernameEntry" Placeholder="Enter username" TextColor="GhostWhite" WidthRequest="300"/>
+            <Label Text="Email" TextColor="GhostWhite"/>
+            <Entry x:Name="EmailEntry" 
+                   Placeholder="Enter email" 
+                   Keyboard="Email"
+                   TextColor="GhostWhite"/>
 
-        <Label Text="Password" TextColor="GhostWhite" WidthRequest="300"/>
-        <Entry x:Name="PasswordEntry" Placeholder="Enter password" IsPassword="True" TextColor="#D8B446" WidthRequest="300"/>
+            <Label Text="First Name" TextColor="GhostWhite"/>
+            <Entry x:Name="FirstNameEntry" 
+                   Placeholder="Enter first name"
+                   TextColor="GhostWhite"/>
 
-        <Label Text="Confirm Password" TextColor="GhostWhite" WidthRequest="300"/>
-        <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm password" IsPassword="True" TextColor="#D8B446" WidthRequest="300"/>
+            <Label Text="Last Name" TextColor="GhostWhite"/>
+            <Entry x:Name="LastNameEntry" 
+                   Placeholder="Enter last name"
+                   TextColor="GhostWhite"/>
 
-        <Button Text="Register" BackgroundColor="#4A6E8A" HorizontalOptions="Center" WidthRequest="150"/>
-    </VerticalStackLayout>
+            <Label Text="Username" TextColor="GhostWhite"/>
+            <Entry x:Name="UsernameEntry" 
+                   Placeholder="Enter username"
+                   TextColor="GhostWhite"/>
 
+            <Label Text="Password" TextColor="GhostWhite"/>
+            <Entry x:Name="PasswordEntry" 
+                   Placeholder="Enter password" 
+                   IsPassword="True"
+                   TextColor="#D8B446"/>
+
+            <Label Text="Confirm Password" TextColor="GhostWhite"/>
+            <Entry x:Name="ConfirmPasswordEntry" 
+                   Placeholder="Confirm password" 
+                   IsPassword="True"
+                   TextColor="#D8B446"/>
+
+            <Button Text="Register" 
+                    BackgroundColor="#4A6E8A" 
+                    HorizontalOptions="Center" 
+                    WidthRequest="150"
+                    Clicked="OnRegisterClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

@@ -124,6 +124,7 @@ C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\TPApp.Generated
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\TPApp.AssemblyInfoInputs.cache
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\TPApp.AssemblyInfo.cs
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\TPApp.csproj.CoreCompileInputs.cache
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\TPApp.sourcelink.json
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\XamlC.stamp
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\TPApp.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\TPApp.pdb
@@ -159,14 +160,20 @@ C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Jsr305Binding.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Jsr305Binding.pdb
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\ko\Microsoft.Maui.Controls.resources.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.CSharp.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Configuration.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Http.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Logging.Debug.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Logging.dll
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Options.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Extensions.Primitives.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.dll
@@ -179,6 +186,7 @@ C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Graphics.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Graphics.pdb
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.pdb
+C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Net.Http.Headers.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualBasic.Core.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualBasic.dll
 C:\Users\Lars\Desktop\Skole\H5\TP\TPApp\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Win32.Primitives.dll

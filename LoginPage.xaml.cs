@@ -1,13 +1,18 @@
 using Microsoft.Maui.Storage;
 using System.Text;
+using System.Net.Http;
 
 namespace TPApp;
 
 public partial class LoginPage : ContentPage
 {
-    public LoginPage()
+    private readonly HttpClient _httpClient; // Injected client
+
+    // Modified constructor to accept HttpClient
+    public LoginPage(HttpClient httpClient)
     {
         InitializeComponent();
+        _httpClient = httpClient; // Store the injected client
     }
 
     protected override async void OnAppearing()
@@ -16,18 +21,9 @@ public partial class LoginPage : ContentPage
 
         try
         {
-            // Get the value securely and check if it's null
             string isLoggedIn = await SecureStorage.GetAsync("isLoggedIn");
-
-            if (isLoggedIn == null)
-            {
-                Console.WriteLine("No login state found.");
-                return;
-            }
-
             if (isLoggedIn == "true")
             {
-                // Navigate to MainPage if already logged in
                 await Shell.Current.GoToAsync("//MainPage");
                 var appShell = (AppShell)Shell.Current;
                 appShell.AppVisible = true;
@@ -35,15 +31,20 @@ public partial class LoginPage : ContentPage
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"SecureStorage Error: {ex.Message}");
+            await DisplayAlert("Error", $"Startup error: {ex.Message}", "OK");
         }
+    }
+
+    private async void OnRegisterClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("//RegistrationPage");
     }
 
     private async void LoginButton_Clicked(object sender, EventArgs e)
     {
         if (UsernameEntry == null || PasswordEntry == null)
         {
-            await DisplayAlert("Error", "UI elements are not properly initialized.", "OK");
+            await DisplayAlert("Error", "UI elements not initialized.", "OK");
             return;
         }
 
@@ -52,59 +53,50 @@ public partial class LoginPage : ContentPage
 
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
         {
-            await DisplayAlert("Error", "Please enter both username and password.", "OK");
+            await DisplayAlert("Error", "Please enter both fields.", "OK");
             return;
         }
 
-        var loginData = new { Username = username, Password = password };
-        string apiUrl = "https://localhost:7226/api/Users/login"; // Change to your API URL
-
-        using (var client = new HttpClient())
+        try
         {
+            // Use the injected HttpClient instead of creating a new one
+            var loginData = new { Username = username, Password = password };
             var json = System.Text.Json.JsonSerializer.Serialize(loginData);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            try
-            {
-                HttpResponseMessage response = await client.PostAsync(apiUrl, content);
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseString = await response.Content.ReadAsStringAsync();
-                    var result = System.Text.Json.JsonSerializer.Deserialize<LoginResponse>(responseString);
+            // Changed to use relative path (base address is already configured)
+            HttpResponseMessage response = await _httpClient.PostAsync("api/Users/login", content);
 
-                    // Store login token securely
-                    await SecureStorage.SetAsync("authToken", result.Token);
-                    await SecureStorage.SetAsync("userId", result.UserId.ToString());
-
-                    // Navigate to MainPage
-                    await Shell.Current.GoToAsync("//MainPage");
-                    var appShell = (AppShell)Shell.Current;
-                    appShell.AppVisible = true;
-                }
-                else
-                {
-                    await DisplayAlert("Login Failed", "Invalid username or password.", "OK");
-                }
-            }
-            catch (Exception ex)
+            if (response.IsSuccessStatusCode)
             {
-                Console.WriteLine($"Login Error: {ex.Message}");
-                await DisplayAlert("Error", "Failed to connect to server.", "OK");
+                var responseString = await response.Content.ReadAsStringAsync();
+                var result = System.Text.Json.JsonSerializer.Deserialize<LoginResponse>(responseString);
+
+                await SecureStorage.SetAsync("authToken", result.token);
+                await SecureStorage.SetAsync("userId", result.userId.ToString());
+                await SecureStorage.SetAsync("isLoggedIn", "true");
+
+                await Shell.Current.GoToAsync("//MainPage");
+                var appShell = (AppShell)Shell.Current;
+                appShell.AppVisible = true;
             }
+            else
+            {
+                await DisplayAlert("Error", "Invalid credentials (code: " + response.StatusCode + ")", "OK");
+            }
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Connection Error",
+                $"Failed to connect: {ex.GetType().Name} - {ex.Message}",
+                "OK");
         }
     }
 
     public class LoginResponse
     {
-        public string Token { get; set; }
-        public int UserId { get; set; }
-        public string Username { get; set; }
-    }
-
-
-
-    private bool AuthenticateUser(string username, string password)
-    {
-        return username == "test" && password == "1234"; // Replace with real authentication
+        public string token { get; set; }
+        public int userId { get; set; }
+        public string username { get; set; }
     }
 }

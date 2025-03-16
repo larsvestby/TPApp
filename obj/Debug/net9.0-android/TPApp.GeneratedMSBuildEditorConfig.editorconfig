@@ -18,11 +18,11 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Lars/Desktop/Skole/H5/TP/TPApp/AddFoodPage.xaml]
+[C:/Users/Lars/Desktop/Skole/H5/TP/TPApp/AddFoodItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TPApp.AddFoodPage.xaml
-build_metadata.AdditionalFiles.TargetPath = AddFoodPage.xaml
-build_metadata.AdditionalFiles.RelativePath = AddFoodPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TPApp.AddFoodItemPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddFoodItemPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddFoodItemPage.xaml
 
 [C:/Users/Lars/Desktop/Skole/H5/TP/TPApp/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

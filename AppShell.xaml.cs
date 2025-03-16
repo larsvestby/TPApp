@@ -1,5 +1,5 @@
 ﻿using Microsoft.Maui.Storage;
-using System.ComponentModel;  // For INotifyPropertyChanged
+using System.ComponentModel;
 
 namespace TPApp
 {
@@ -7,7 +7,6 @@ namespace TPApp
     {
         private bool _appVisible;
 
-        // Implement INotifyPropertyChanged to update UI when property changes
         public event PropertyChangedEventHandler PropertyChanged;
 
         public bool AppVisible
@@ -18,7 +17,10 @@ namespace TPApp
                 if (_appVisible != value)
                 {
                     _appVisible = value;
-                    OnPropertyChanged(nameof(AppVisible)); // Notify the UI about the change
+                    OnPropertyChanged(nameof(AppVisible));
+
+                    // Update flyout visibility when property changes
+                    FlyoutBehavior = value ? FlyoutBehavior.Flyout : FlyoutBehavior.Disabled;
                 }
             }
         }
@@ -26,28 +28,44 @@ namespace TPApp
         public AppShell()
         {
             InitializeComponent();
-            BindingContext = this; // Set the BindingContext to the current instance to enable data binding
+            BindingContext = this;
+            Routing.RegisterRoute(nameof(AddFoodItemPage), typeof(AddFoodItemPage));
+
+            // Initialize visibility based on login state
+            InitializeVisibility();
+        }
+
+        private async void InitializeVisibility()
+        {
+            try
+            {
+                var isLoggedIn = await SecureStorage.GetAsync("isLoggedIn");
+                AppVisible = isLoggedIn == "true";
+            }
+            catch
+            {
+                AppVisible = false;
+            }
         }
 
         private async void OnLogoutClicked(object sender, EventArgs e)
         {
             try
             {
+                // Clear all auth-related storage
                 SecureStorage.Remove("isLoggedIn");
-                AppVisible = false; // Hide the MainPage in the Flyout after logout
+                SecureStorage.Remove("authToken");
+                SecureStorage.Remove("userId");
+
+                AppVisible = false;
+                await Shell.Current.GoToAsync("//LoginPage");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"SecureStorage Error on Logout: {ex.Message}");
-                await DisplayAlert("Error", "Failed to clear login state.", "OK");
-                return;
+                await DisplayAlert("Logout Error", $"Failed to logout: {ex.Message}", "OK");
             }
-
-            // Navigate to LoginPage after logout
-            await Shell.Current.GoToAsync("//LoginPage");
         }
 
-        // To trigger property change notification
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

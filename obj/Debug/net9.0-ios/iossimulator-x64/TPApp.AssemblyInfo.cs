@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1f983e09060d7ba121d16647de0b26dc7389d6ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
